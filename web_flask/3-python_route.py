@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A simple flask server with few routes
+A simple flask server model with one route
 """
 from flask import Flask
 

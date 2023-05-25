@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-A simple flask server module containing routes
-for web framework tasks
+A simple flask server model with one route
 """
 from flask import Flask
 

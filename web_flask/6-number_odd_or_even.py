@@ -1,0 +1,93 @@
+#!/usr/bin/python3
+"""
+A simple flask server model with one route
+"""
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route("/", strict_slashes=False)
+def index():
+    """
+    The index route returning Hello HBNB!
+    """
+    return "Hello HBNB!"
+
+
+@app.route("/hbnb", strict_slashes=False)
+def hbnb():
+    """
+    The hbnb route returning HBNB
+    """
+    return "HBNB"
+
+
+@app.route("/c/<text>", strict_slashes=False)
+def c(text):
+    """
+    C route that returns C and the text
+
+    Args:
+    text: a string to add to C and print
+    """
+    return "C " + text.replace("_", " ")
+
+
+@app.route("/python", strict_slashes=False)
+@app.route("/python/<text>", strict_slashes=False)
+def python(text="is cool"):
+    """
+    Python route prints python and text
+
+    Args:
+    text: a string to add to python
+    """
+    return "Python " + text.replace("_", " ")
+
+
+@app.route("/number/<int:n>", strict_slashes=False)
+def number(n):
+    """
+    Number checks if n is a number and print it
+
+    Args:
+    n: a number to check and return
+    """
+    return str(n) + " is a number"
+
+
+@app.route("/number_template/<int:n>", strict_slashes=False)
+def number_template(n):
+    """
+    Number Template Route for displaying numbers
+    in HMTL template
+
+    Args:
+    n: number to display
+
+    Returns:
+    An html template page diplaying the number in h1
+    """
+    return render_template("5-number.html", number=n)
+
+
+@app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
+def number_odd_or_even(n):
+    """
+    Number odd or even route to check if the number
+    is odd or even.
+
+    Args:
+    n: the number to check
+
+    Returns:
+    An html template page diplaying the number and odd or even
+    """
+    num_type = "odd" if n % 2 != 0 else "even"
+    return render_template(
+        "6-number_odd_or_even.html", num_type=num_type, number=n)
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

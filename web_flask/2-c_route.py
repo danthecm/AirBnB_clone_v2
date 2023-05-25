@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A simple flask server module
+A simple flask server module for web framework tasks
 """
 from flask import Flask
 
@@ -23,7 +23,7 @@ def hbnb():
     return "HBNB"
 
 
-@app.route("/c/<string:text>", strict_slashes=False)
+@app.route("/c/<text>", strict_slashes=False)
 def c(text):
     """
     C route that takes a text and prints C then the text

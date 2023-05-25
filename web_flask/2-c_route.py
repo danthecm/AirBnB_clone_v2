@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-A simple flask server module for web framework tasks
+A simple flask server module containing routes
+for web framework tasks
 """
 from flask import Flask
 
@@ -26,7 +27,7 @@ def hbnb():
 @app.route("/c/<text>", strict_slashes=False)
 def c(text):
     """
-    C route that takes a text and prints C then the text
+    C route that returns C and the text
     """
     new_text = text.replace("_", " ")
     return f"C {new_text}"

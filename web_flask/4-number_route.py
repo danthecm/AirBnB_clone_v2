@@ -54,7 +54,7 @@ def number(n):
     Args:
     Number: a number to print
     """
-    return n + " is a number"
+    return f"{n} is a number"
 
 
 if __name__ == "__main__":

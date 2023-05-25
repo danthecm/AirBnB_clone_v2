@@ -49,10 +49,10 @@ def python(text="is cool"):
 @app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     """
-    Number route prints the number 
+    Number route prints the number
 
     Args:
-    Number: a number to print
+    n: a number to return
     """
     return f"{n} is a number"
 

@@ -28,11 +28,10 @@ def c(text):
     """
     C route that returns C and the text
 
-    Args: 
+    Args:
     text: a string to add to C and print
     """
-    new_text = text.replace("_", " ")
-    return f"C {new_text}"
+    return "C " + text.replace("_", " ")
 
 
 if __name__ == "__main__":

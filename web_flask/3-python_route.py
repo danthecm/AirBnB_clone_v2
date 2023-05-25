@@ -36,6 +36,9 @@ def c(text):
 def python(text="is cool"):
     """
     Python route prints python and text
+
+    Args:
+    text: a string to add to python
     """
     return "Python " + text.replace("_", " ")
 

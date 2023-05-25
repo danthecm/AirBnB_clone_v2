@@ -1,9 +1,16 @@
+#!/usr/bin/python3
+"""
+A simple flask server model with one route
+"""
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def index():
+    """
+    The index route returning Hello HBNB!
+    """
     return "Hello HBNB!"
 
 if __name__ == "__main__":

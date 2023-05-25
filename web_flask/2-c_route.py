@@ -27,6 +27,9 @@ def hbnb():
 def c(text):
     """
     C route that returns C and the text
+
+    Args: 
+    text: a string to add to C and print
     """
     new_text = text.replace("_", " ")
     return f"C {new_text}"
